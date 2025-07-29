@@ -1,25 +1,31 @@
-# 🔍 Vision Detector | OpenCV Annotation Tool
+# 🔍 Face Detector | OpenCV Annotation Tool
 
-**Automatically detect faces and objects in images with labeled bounding boxes**
+**Automatically detect human faces in images using Haar Cascades and annotate them with bounding boxes**
 
 [![OpenCV](https://img.shields.io/badge/OpenCV-5.0-blue?logo=opencv)](https://opencv.org/)
 [![Python](https://img.shields.io/badge/Python-3.8+-green?logo=python)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
-![Demo](data/output/sample_processed.jpg)  
-*Example output with detected faces (green) and objects (blue)*
+## 🖼️ Example
+
+| Original Image | Detected Faces |
+|----------------|----------------|
+| ![Input](data/input/sample.jpg) | ![Output](data/output/sample_processed.jpg) |
+
+---
 
 ## ✨ Features
-- **Face Detection** using Haar Cascades
-- **80+ Object Detection** (COCO dataset)
-- Confidence scores for each detection
-- Clean visual annotations
-- Batch image processing support
+- 🧠 Face detection using Haar Cascade Classifier
+- 📦 Simple, clean annotations
+- 🗂️ Processes local images from folder
+- 💾 Output stored with bounding boxes
+
+---
 
 ## 🛠️ Installation
 ```bash
-git clone https://github.com/your-username/vision-detector.git
-cd vision-detector
+git clone https://github.com/your-username/face-detector.git
+cd face-detector
 pip install -r requirements.txt
 ```
 
@@ -30,15 +36,3 @@ pip install -r requirements.txt
 python src/main.py
 ```
 3. Find annotated images in data/output/
-### Advanced Options:
-```bash
-# Custom input/output paths
-python src/main.py --input data/input/custom.jpg --output results/final.jpg
-
-# Adjust confidence threshold (default: 0.5)
-python src/main.py --confidence 0.7
-```
-
-## 🛠️ Customization
-To detect specific objects only:
-Edit coco.names and keep only classes you need (e.g., "person", "car", "dog").
